@@ -1,0 +1,65 @@
+@import "./_functions";
+@import "./_variables";
+
+@include customFont($marioFont);
+
+body{
+    margin: 0;
+}
+
+.pictureOne, .pictureTwo, .pictureThree {
+    @include basicImageSettings();
+    @include wallpaperSetting();
+}   
+
+.container{
+    width: 100%;
+    cursor: pointer;
+    @include basicImageSettings();
+    @include customUrlImage($NAVIMAGE);
+    transition: background-image 1s;
+    &:hover { 
+        @include customUrlImage($NAVIMAGE2);
+    } 
+}
+
+#container-nav{
+    width: 20vw;
+    height: 15vh;
+    margin: auto;  
+}
+
+.informationBox{
+    @include basicTextSettings($fontSizeP, $fontSizeH1, marioFont);
+    @include flexDirection(column);
+    align-items: center;
+
+    h1{
+        @include textGradient($gradColor, $gradColor2)
+    }
+    p{
+        font-family: Arial;
+        width: 25vw;
+    }
+}
+
+#text {
+        @include textGradient($gradColor3, $gradColor4);
+    }
+
+#thirdText{
+    @include textGradient($gradColor5, $gradColor6);
+}
+
+.pictureOne{
+    @include customUrlImage($wallpaperOne);
+}
+
+.pictureTwo{
+    @include customUrlImage($wallpaperTwo);
+}
+
+.pictureThree{
+    @include customUrlImage($wallpaperThree);
+}
+

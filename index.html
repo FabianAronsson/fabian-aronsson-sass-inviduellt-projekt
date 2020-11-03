@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container" onclick="changeImage()">
+        <div id="container-nav">
+            <div id="logo"></div>
+        </div>
+    </div>
+    
+    <div class="pictureOne"></div>
+    <div class="informationBox">
+        <h1>Super Mario 64</h1>
+        <p>Super Mario 64 is a 3D platformer in which the player controls Mario through several courses. 
+            The player gathers stars in each course; some stars only appear after completing certain tasks, 
+            often hinted at by the name of the course.</p>
+    </div>
+
+    <div class="pictureTwo"></div>
+    <div class="informationBox">
+            <h1 id="text">Super Mario Sunshine</h1>
+        <p>Mario and Peach go on a vacation to Isle Delfino. But their trip soon gets spoiled after an imposter disguised as 
+           Mario paints and pollutes the entire island.  Mario's vacation goes horribly wrong when he finds someone has polluted 
+           Isle Delfino, his destination.</p>
+    </div>
+
+    <div class="pictureThree"></div>
+    <div class="informationBox">
+        <h1 id="thirdText">Super Mario Galaxy</h1>
+        <p>Bowser kidnaps Princess Peach and takes her to the center of the universe where he is creating his own galaxy to 
+            control the whole universe. It is up to Mario, Luigi and new friends to travel galaxy after galaxy until they find her.</p>
+    </div>
+
+</body>
+
+<script type="text/javascript"> 
+    function changeImage(){ //för att kunna ändra bild vid klick används javascript. 
+        var container = document.getElementsByClassName("container")[0];
+        container.style.backgroundImage = "url(images/navImage2.png)";
+        container.style.cursor = "default";
+    }
+
+</script>
+</html>
+
+
